@@ -1,0 +1,5 @@
+package com.praful.cms;
+
+public class MvcConfig {
+
+}

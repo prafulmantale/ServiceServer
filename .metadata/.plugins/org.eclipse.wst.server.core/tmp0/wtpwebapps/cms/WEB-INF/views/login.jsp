@@ -9,11 +9,17 @@
 </head>
 <body>
 
-<c:if test="$(not empty param.error)">
+<c:if test="${not empty param.error}">
 	<font color="red">
-		Login error.
+		Login error.<br/>
 		Reason : ${sessionScope['SPRING_SECURITY_LAST_EXCEPTION'].message}
 	</font>
 </c:if>	
+
+		<form action="/login" method="post">
+            <div><label> User Name : <input type="text" name="username"/> </label></div>
+            <div><label> Password: <input type="password" name="password"/> </label></div>
+            <div><input type="submit" value="Sign In"/></div>
+        </form>
 </body>
 </html>
